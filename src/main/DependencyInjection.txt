@@ -72,3 +72,11 @@ engine.start();
 System.out.println("Car is running");
 }
 }
+
+Spring flow:
+Application starts – Spring Boot starts the application context.
+IoC Container initializes – Spring creates and initializes the ApplicationContext, which acts as the IoC container.
+Component Scanning – Spring scans for classes annotated with @Component, @Service, @Repository, @Controller, etc.
+Bean Creation – Spring creates and registers the discovered beans.
+Dependency Injection – Spring resolves dependencies and injects them into the beans, typically through constructors.
+Application Ready – The application context is refreshed, and the application is ready to serve requests.
