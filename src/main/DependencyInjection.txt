@@ -1,0 +1,74 @@
+Dependency Injection:
+-Dependency means, a java object is depended on another object to perform its task
+for example, a Car object is depended on Engine Object to run.
+-This is called tight coupling.
+
+-Injection means, we provide an object a dependency from outside the class.
+-This is called lose coupling, here the object is not dependent on any other object internally.
+
+Types of DI:
+1. Constructor Injection: used in the form of constructor
+example:
+
+@Component // this tells the IOC container to create a bean on this class; Bean helps in automatically creating an object of this class and storing it in the container
+class Engine {
+public void start(){
+System.out.println("Engine Started");
+}
+}
+@Component tells Spring:
+"Spring, manage this class. Create an object of this class and store it in your IoC container."
+Here's what happens:
+- Spring scans your application for classes annotated with @Component.
+- It finds the Engine class.
+- Spring creates an object of Engine.
+- Spring stores that object inside its IoC container as a Spring Bean.
+
+
+class Car {
+private Engine engine; // we are not creating this object yet.
+
+@Autowired // this creates an object from the stored bean and injects it directly (here it created object of Engine and injects inside the car class)
+public Car(Engine engine){
+this.engine = engine;
+}
+public void drive(){
+engine.start();
+System.out.println("Car is Running");
+}
+}
+
+Here, Car depends on Engine.
+Why?
+Because the Car needs an Engine object to execute its drive() method.
+This relationship is called a dependency.
+Now, what does @Autowired do?
+It tells Spring:
+"Spring, when creating the Car object, find an appropriate Engine bean and inject it into this constructor."
+Conceptually, Spring does something similar to:
+Engine engine = new Engine();
+Car car = new Car(engine);
+
+
+2. Setter Injection
+
+@Component
+class Car {
+private Engine engine;
+@Autowired
+public void setEngine(Engine engine){
+this.engine = engine;
+}
+}
+
+3. Field Injection
+
+@Component
+class Car{
+@Autowired
+private Engine engine;
+public void drive(){
+engine.start();
+System.out.println("Car is running");
+}
+}
