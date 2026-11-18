@@ -6,12 +6,17 @@ import org.springframework.context.annotation.Configuration;
 public class Student {
     private String name;
 
-    // constructor
-    public Student(String studentName){
-       name = studentName;
-        System.out.println("Constructor Injection Called!");
-        System.out.println("Student Objected Created");
+//    // constructor
+//    public Student(String studentName){
+//       name = studentName;
+//        System.out.println("Constructor Injection Called!");
+//        System.out.println("Student Objected Created");
+//
+//    }
 
+    // constructor
+    public Student(){
+        System.out.println("Student Objected Created");
     }
 
     public void setName(String name) {
