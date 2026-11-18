@@ -1,0 +1,6 @@
+Configuration: Instructions given to the spring container
+
+Types of Spring Configuration
+1. XML Configuration
+2. Java Configuration
+3. Annotation Bases Configuration
