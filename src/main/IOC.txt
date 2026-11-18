@@ -1,0 +1,3 @@
+IOC - Inversion Of Control
+- In Spring framework, ICO is the concept where the control of creating objects and managing dependencies is manually is shifted from the programmer to Spring container
+- It makes the code cleaner and more maintainable, as the object creation and dependency management is automatically managed by the Spring framework.
