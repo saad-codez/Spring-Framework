@@ -6,10 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
     static void main() {
-//        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Student student = context.getBean("student", Student.class);
-        student.display();
+//        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml"); // for xml file
+//        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class); // for java based annotation
+//        Student student = context.getBean("student", Student.class);
+//        student.display();
     }
 
 }

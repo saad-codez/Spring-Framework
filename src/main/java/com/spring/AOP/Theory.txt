@@ -1,0 +1,5 @@
+AOP- Aspect Oriented Programming,
+it is a concept where we can avoid writing same code at multiple places in our project.
+for example, login, transaction, exception etc.
+If a program has multiple methods, and we need same code before the method, we use AOP, it has 2 annotations, @Before and @After.
+It separates the main logic from frequently used code making the main logic cleaner and easy to maintain
